@@ -1,0 +1,63 @@
+2026-05-23 23:41:32,788 - INFO - TRADE RESULT: WIN
+2026-05-23 23:41:34,072 - INFO - TRADE RESULT: LOSS
+2026-05-23 23:42:11,079 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:42:16,643 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:42:23,324 - INFO - BUY ORDER: OrderSendResult(retcode=10009, deal=3848096071, order=4480220557, volume=3.48, price=75534.95999999999, bid=75519.56, ask=75534.95999999999, comment='EMA_BREAKOUT_BUY', request_id=2385081702, retcode_external=0, request=TradeRequest(action=1, magic=90920, order=0, symbol='BTCUSDm', volume=3.48, price=75536.12, stoplimit=0.0, sl=75353.62, tp=75627.59, deviation=20, type=0, type_filling=1, type_time=0, expiration=0, comment='EMA_BREAKOUT_BUY', position=0, position_by=0))
+2026-05-23 23:42:23,325 - INFO - TRADE RESULT: WIN
+2026-05-23 23:43:49,027 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:43:54,444 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:43:59,983 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:44:05,694 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:44:11,207 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:44:16,618 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:44:22,134 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:44:27,684 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:44:33,126 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:44:38,746 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:44:44,275 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:44:49,806 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:44:55,282 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:45:00,829 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:45:06,392 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:45:11,906 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:45:17,326 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:45:22,848 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:45:28,370 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:45:33,795 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:45:39,321 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:45:44,846 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:45:50,474 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:45:55,894 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:46:01,426 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:46:06,942 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:46:12,360 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:46:17,890 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:46:23,401 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:46:28,924 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:46:34,348 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:46:39,858 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:46:45,382 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:46:50,902 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:46:56,327 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:47:01,853 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:47:07,401 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:47:12,824 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:47:18,368 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:47:23,893 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:47:29,406 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:47:34,826 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:47:40,348 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:47:45,861 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:47:51,382 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:47:56,929 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'
+2026-05-23 23:51:33,482 - INFO - TRADE RESULT: WIN
+2026-05-23 23:51:33,963 - INFO - TRADE RESULT: LOSS
+2026-05-23 23:51:34,507 - INFO - TRADE RESULT: WIN
+2026-05-23 23:51:34,963 - INFO - TRADE RESULT: WIN
+2026-05-24 00:58:35,718 - INFO - TRADE RESULT: WIN
+2026-05-24 00:58:36,386 - INFO - TRADE RESULT: LOSS
+2026-05-24 00:58:36,966 - INFO - TRADE RESULT: WIN
+2026-05-24 00:58:37,480 - INFO - TRADE RESULT: WIN
+2026-05-24 01:20:05,035 - INFO - BUY ORDER: OrderSendResult(retcode=10009, deal=3848144083, order=4480269299, volume=5.76, price=75883.22, bid=75869.22, ask=75883.22, comment='EMA_BREAKOUT_BUY', request_id=759318591, retcode_external=0, request=TradeRequest(action=1, magic=90920, order=0, symbol='BTCUSDm', volume=5.76, price=75883.22, stoplimit=0.0, sl=75772.84, tp=75938.48, deviation=20, type=0, type_filling=1, type_time=0, expiration=0, comment='EMA_BREAKOUT_BUY', position=0, position_by=0))
+2026-05-24 04:54:01,678 - INFO - TRADE RESULT: WIN
+2026-05-24 09:20:44,827 - ERROR - unsupported operand type(s) for *: 'NoneType' and 'float'

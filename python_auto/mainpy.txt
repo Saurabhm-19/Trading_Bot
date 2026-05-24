@@ -1,0 +1,217 @@
+import time
+from unittest import result
+from unittest import result
+import pandas as pd
+import MetaTrader5 as mt5
+
+from mt5_handler import (
+    connect_mt5,
+    shutdown_mt5,
+    get_candles,
+    place_order,
+    has_open_trade
+)
+
+from strategy import (
+    calculate_ema,
+    check_signal
+)
+
+from excel_handler import (
+    create_excel,
+    add_trade,
+    update_result
+)
+
+from config import *
+from logger import logger
+
+def monitor_trade(ticket, trade_number):
+
+    while True:
+
+        positions = mt5.positions_get(ticket=ticket)
+
+        if positions is None or len(positions) == 0:
+
+            history = mt5.history_deals_get()
+
+            if history:
+
+                last_deal = history[-1]
+
+                if last_deal.profit > 0:
+                    update_result(trade_number, "W")
+                    logger.info("Trade Won")
+
+                else:
+                    update_result(trade_number, "L")
+                    logger.info("Trade Lost")
+
+            break
+
+        time.sleep(2)
+
+def main():
+
+    create_excel()
+
+    if not connect_mt5():
+        return
+
+    repeat_count = int(input("Enter number of trades: "))
+
+    completed = 0
+
+    last_signal_time = None
+
+    while completed < repeat_count:
+        print("Scanning market for signals...")
+
+        try:
+
+            if has_open_trade(SYMBOL):
+                print("Trade already running...")
+                time.sleep(5)
+                continue
+
+            rates = get_candles(SYMBOL, TIMEFRAME, 100)
+
+            df = pd.DataFrame(rates)
+
+            signal_time = df.iloc[-2]["time"]
+
+            if signal_time == last_signal_time:
+                time.sleep(1)
+                continue
+
+            df = calculate_ema(df)
+
+            signal = check_signal(df)
+            print("Checking EMA breakout conditions...")
+
+            if signal:
+                print(f"Signal Found: {signal['type']}")
+
+                result = place_order(
+                    SYMBOL,
+                    LOT_SIZE,
+                    signal["type"],
+                    signal["sl"],
+                    signal["tp"]
+                )
+
+                if result.retcode in [10009, 10008]:
+                    print("Trade Executed Successfully")
+                    print("Ticket:", result.order)
+                    print("Retcode:", result.retcode)
+
+                    ticket = result.order
+
+                    logger.info(f"Trade Executed: {signal['type']}")
+
+                    trade_data = {
+                        "symbol": SYMBOL,
+                        "lot": LOT_SIZE,
+                        "direction": signal["type"],
+                        "entry": signal["entry"],
+                        "sl": signal["sl"],
+                        "tp": signal["tp"],
+                        "repeat": repeat_count
+                    }
+
+                    trade_number = add_trade(trade_data)
+
+                    monitor_trade(ticket, trade_number)
+
+                    completed += 1
+
+                    print(f"Completed Trades: {completed}/{repeat_count}")
+
+                    last_signal_time = signal_time
+
+                else:
+                    
+                    print("ORDER FAILED")
+                    print("Retcode:", result.retcode)
+                    print("Comment:", result.comment)
+
+                    logger.error(f"Order Failed: {result.retcode}")
+
+            time.sleep(CHECK_INTERVAL)
+
+        except Exception as e:
+            logger.error(str(e))
+            print("Error:", e)
+            time.sleep(5)
+
+    shutdown_mt5()
+
+if __name__ == "__main__":
+    main()
+
+    !@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@(!)@(!)@(!)@()!(@)(!@)(!)@(!)(@)!(@)(!@)!(@)!(@)!(@)!(@)(@)!(@)!(@)(!)@(!)@(!(@)!(@))
+
+    # import time
+# import MetaTrader5 as mt5
+
+
+# from mt5_handler import (
+#     connect_mt5,
+#     shutdown_mt5
+# )
+
+# from strategy import (
+#     run_strategy,
+#     monitor_closed_trades
+# )
+
+# from excel_handler import create_excel
+
+# from logger import logger
+
+# # =========================================
+# # MAIN
+# # =========================================
+
+# def main():
+
+#     create_excel()
+
+#     if not connect_mt5():
+
+#         print("MT5 CONNECTION FAILED")
+
+#         return
+
+#     print("MT5 CONNECTED")
+#     print("BOT STARTED")
+
+#     while True:
+
+#         try:
+
+#             # RUN STRATEGY
+#             run_strategy()
+
+#             # CHECK CLOSED TRADES
+#             monitor_closed_trades()
+
+#             # WAIT
+#             time.sleep(2)
+
+#         except Exception as e:
+
+#             logger.error(str(e))
+
+#             print("ERROR:", e)
+
+#             time.sleep(5)
+
+# # =========================================
+# # START
+# # =========================================
+
+# if __name__ == "__main__":
+
+#     main()
